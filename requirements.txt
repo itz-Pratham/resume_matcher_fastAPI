@@ -1,0 +1,37 @@
+# ---------------------------------------------
+# Main extra index (needed for the *+cpu wheels)
+--extra-index-url https://download.pytorch.org/whl/cpu
+# ---------------------------------------------
+
+# Core numerics – stick to NumPy 1.x ABI
+numpy==1.26.4
+scipy==1.12.0                # last SciPy built for NumPy 1.x
+scikit-learn==1.4.2          # needs NumPy 1.x / SciPy <1.13
+
+# PyTorch stack (CPU-only)
+torch==2.3.1+cpu
+torchvision==0.18.1+cpu
+torchaudio==2.3.1+cpu
+
+# TensorFlow (CPU-only) – compiled for both NumPy 1 & 2
+tensorflow-cpu==2.16.1
+
+# NLP / embeddings
+transformers[torch]==4.41.2  # "[torch]" keeps TF deps optional
+sentence-transformers==2.6.1
+spacy==3.8.7                 # run: python -m spacy download en_core_web_sm
+
+# Web app & I/O helpers
+streamlit==1.35.0
+pdfplumber==0.10.3
+PyMuPDF==1.24.2              # installs as 'fitz'
+docx2txt==0.8
+pandas==2.2.2
+pytest==8.1.1
+fastapi==0.111.0
+python-multipart==0.0.20
+uvicorn==0.29.0
+
+# (optional) file-system / quality-of-life libs your code imports later
+# rapidfuzz==3.8.1
+# fsspec==2024.6.1
