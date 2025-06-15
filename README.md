@@ -56,3 +56,14 @@ proper navigation of each profile is also present
    to `POST` to `/score`. If any path is wrong or a file type is unsupported you
    will receive a detailed `400` error describing how to fix the issue.
 
+   Use this template to enter the raw content in JSON format
+   ```ts
+   {
+   "jd_embedding": [
+   ],
+   "job_title": ,
+   "resume_paths": [
+     ]
+   }
+   ```
+
